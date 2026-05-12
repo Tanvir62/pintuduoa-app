@@ -1,0 +1,55 @@
+{
+  "api": {
+    "baseUrl": "http://localhost:8000/api",
+    "timeout": 30000,
+    "retryAttempts": 3,
+    "retryDelay": 1000
+  },
+  "browser": {
+    "headless": false,
+    "userDataDir": "./config/browser-data",
+    "viewport": {
+      "width": 375,
+      "height": 812,
+      "isMobile": true,
+      "deviceScaleFactor": 3
+    },
+    "userAgent": "Mozilla/5.0 (Linux; Android 13; SM-G998B) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36 MicroMessenger/8.0.47.2560(0x67002F47) NetType/WIFI Language/zh_CN"
+  },
+  "scraper": {
+    "autoScrollDelay": 3000,
+    "clickDelay": 500,
+    "waitForLoadTimeout": 10000,
+    "maxRetries": 3
+  },
+  "download": {
+    "maxConcurrent": 3,
+    "timeout": 30000,
+    "retryAttempts": 3,
+    "baseDir": "./storage/images",
+    "quality": {
+      "slider": 100,
+      "color": 100,
+      "description": 85
+    }
+  },
+  "database": {
+    "path": "./database/scraper.db",
+    "backupEnabled": true,
+    "backupInterval": 3600000
+  },
+  "antiBot": {
+    "enabled": true,
+    "stealthMode": true,
+    "randomDelay": {
+      "min": 100,
+      "max": 500
+    },
+    "scrollSimulation": true
+  },
+  "logging": {
+    "level": "info",
+    "maxLogs": 1000,
+    "fileRotation": true
+  }
+}
